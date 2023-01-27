@@ -6,7 +6,15 @@ var otherTile;
 
 var turns = 0;
 
+var min =0;
+var sec =0;
+var mill =0;
+
 window.onload = function() {
+    //game()
+}
+
+function game(){
     //initialize the 5x5 board
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
@@ -89,4 +97,48 @@ function dragEnd() {
 
     turns += 1;
     document.getElementById("turns").innerText = turns;
+}
+
+//timer and Start/Refresh Button
+function btnStart() {
+    game();
+    document.getElementById("start").disabled=true;
+    t_interval = setInterval(timer, 1000);
+}
+
+function btnRefresh() {
+    document.getElementById("start").disabled=false;
+    clearInterval(t_interval);
+    min =0;
+    sec =0;
+    mill =0;
+    write_time();
+    //delete all children of board and pieces
+    document.getElementById("board").innerHTML='';
+    document.getElementById("pieces").innerHTML='';
+}
+
+function timer() {
+    sec++;
+        if(sec>59) {
+            sec=0;min++;
+        }
+    write_time();
+}
+
+function write_time() {
+    if(min <10) {
+        document.getElementById("min").innerText = ('0'+min+':')
+    } 
+    else document.getElementById("min").innerText = (min+':');
+               
+    if(sec<10){                     
+        document.getElementById("sec").innerText = ('0'+sec);
+    }       
+    else document.getElementById("sec").innerText = (sec);
+}
+
+//wincondition
+function win() {
+    
 }

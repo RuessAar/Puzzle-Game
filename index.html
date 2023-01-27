@@ -10,9 +10,19 @@
     </head>
 
     <body>
-        <br>
+        <br></br>
         <div id="board"></div>
-        <h2>Turns: <span id="turns">0</span></h2>
+        <div>
+                <p></p>
+                <button id="start" onclick="btnStart();">Start</button>
+                <!-- Turns: <span id="turns">0</span> -->
+                Time: 
+                <span id="min">00:</span>
+                <span id="sec">00</span>
+                <button id="refresh" onclick="btnRefresh()">Refresh</button>
+                <br></br>
+        </div>
+        <!-- <p></p> -->
         <div id="pieces"></div>
     </body>
 </html>

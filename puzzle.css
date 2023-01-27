@@ -4,9 +4,9 @@ body {
 }
 
 #board {
-    width: 400px;
-    height: 400px;
-    border: 2px solid purple;
+    width: 50%;
+    aspect-ratio: 1;
+    border: 2px solid black;
 
     margin: 0 auto;
     display: flex;
@@ -14,16 +14,16 @@ body {
 }
 
 #board img {
-    width: 79px;
-    height: 79px;
-    border: 0.5px solid lightblue;
+    flex: 1 0 19%;
+    width: 19%;
+    border: 0.2px solid lightblue;
 }
 
 
 #pieces {
-    width: 1040px;
-    height: 160px;
-    border: 2px solid purple;
+    width: 90%;
+    aspect-ratio: 3;
+    border: 2px solid black;
 
     margin: 0 auto;
     display: flex;
@@ -31,7 +31,7 @@ body {
 }
 
 #pieces img {
-    width: 79px;
-    height: 79px;
+    /* flex: 1 0 9%; */
+    width: 10%;
     border: 0.5px solid lightblue;
 }
